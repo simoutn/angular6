@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row main">
+    <div class="panel-heading">
+             <div class="panel-title text-center">
+                 <h1 >Ajouter un article</h1>
+                 <hr />
+               </div>
+          </div> 
+    <div class="main-login main-center">
+       <form class="form-horizontal" [formGroup]="formArticle" (ngSubmit)="registerBtn(formArticle)" > 
+        <!--  <form class="form-horizontal" (ngSubmit)="registerBtn(formArticle)" >-->
+        
+        <div class="form-group">
+          <label for="title" class="cols-sm-2 control-label">Titre</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" placeholder="Titre de l'article" formControlName="title" />
+              <!--<input type="text" class="form-control" formControlName="name"  placeholder="Entrer le titre"  />-->
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="content" class="cols-sm-2 control-label">Contenu</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+              
+              <editor apiKey="daf6zfirv885xhsj2cs2fxp3d880xt0roj8lkt4j1pf5tqq7" [init]="{plugins: 'link'}" formControlName="content"></editor>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="image" class="cols-sm-2 control-label">Image</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+              <input type="text" class="form-control"  formControlName="image" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group ">
+          <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Ajouter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+ <router-outlet></router-outlet>

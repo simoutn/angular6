@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row main">
+    <div class="panel-heading">
+             <div class="panel-title text-center">
+                 <h1 >S'enregistrer</h1>
+                 <hr />
+               </div>
+          </div> 
+    <div class="main-login main-center">
+      <form class="form-horizontal" [formGroup]="formUser" (ngSubmit)="registerBtn(formUser)" >
+        
+        <div class="form-group">
+          <label for="name" class="cols-sm-2 control-label">Votre Nom</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" formControlName="name"  placeholder="Entrer  Name"  />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="cols-sm-2 control-label">Votre Email</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+              <input type="text" class="form-control"  formControlName="email"  placeholder="Enter your Email"  />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="username" class="cols-sm-2 control-label">Username</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+              <input type="text" class="form-control"  formControlName="username" placeholder="Entrer votre Username"  />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="cols-sm-2 control-label">Password</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+              <input type="password" class="form-control"  formControlName="password"  placeholder="Entrer votre Password"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="role" class="cols-sm-2 control-label">Role</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+              <input type="text" class="form-control"  formControlName="role" placeholder="User"  />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group ">
+          <button type="submit" [disabled]="formUser.invalid" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+ <router-outlet></router-outlet>
