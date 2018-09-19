@@ -54,7 +54,7 @@ export class UserComponent implements OnInit {
         console.log(res.json().userToken);
         if (res.status === 200) {
           localStorage.setItem('token', res.json().userToken);
-          this.router.navigateByUrl('/admin/newarticle');
+          this.router.navigateByUrl('/dashbord');
         }
       });
     }

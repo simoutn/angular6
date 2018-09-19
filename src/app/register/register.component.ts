@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
       this.testService.registerUser(form.value).subscribe(res => {
         console.log(res);
         if (res.status === 200) {
-          this.router.navigateByUrl('');
+          this.router.navigateByUrl('/dashbord');
         }
       });
     }

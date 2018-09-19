@@ -5,13 +5,15 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { AddarticleComponent } from './addarticle/addarticle.component';
+import { DashbordComponent } from './dashbord/dashbord.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'login', component: UserComponent },
   { path: 'about', component: AboutComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'admin/newarticle', component: AddarticleComponent },
+  { path: 'dashbord/addarticle', component: AddarticleComponent },
+  { path: 'dashbord', component: DashbordComponent },
 ];
 
 @NgModule({

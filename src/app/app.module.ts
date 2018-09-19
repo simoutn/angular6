@@ -18,6 +18,8 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { AddarticleComponent } from './addarticle/addarticle.component';
+import { DashbordComponent } from './dashbord/dashbord.component';
+import { DashbordnavComponent } from './dashbordnav/dashbordnav.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { AddarticleComponent } from './addarticle/addarticle.component';
     AboutComponent,
     HomeComponent,
     RegisterComponent,
-    AddarticleComponent
+    AddarticleComponent,
+    DashbordComponent,
+    DashbordnavComponent
   ],
   imports: [
     BrowserModule,

@@ -18,21 +18,6 @@ router.post('/register', async(req,res) => {
     const result = await userModel.create(post);
     res.send({user : result , msg : "saved"});
 });
-//
-/*passport.use(new LocalStrategy(
-  function(username, password, done) {
-    User.findOne({ username: username }, function (err, user) {
-      if (err) { return done(err); }
-      if (!user) { return done(null, false); }
-      if (!user.verifyPassword(password)) { return done(null, false); }
-      return done(null, user);
-    });
-  }
-));*/
-//
-
-
-
 router.post('/login', async(req,res) => {
     const result = await userModel.findOne({ email: req.body.email });
     if (!result) {
@@ -44,17 +29,9 @@ router.post('/login', async(req,res) => {
     result['password'] = '';
     delete result.password;
     const token = jwt.sign({data:result},'my_secret_key');
-   /* res.redirect('/admin/newaricle');*/
-   //res.redirect('http://localhost:4200/admin/newarticle');
     res.send({user : result, message: 'you are sign in', userToken: token });
 
 });
-/*router.post('/login',
-  passport.authenticate('local', { failureRedirect: '/login' }),
-  function(req, res) {
-    res.redirect('/');
-  });*/
-
 router.post('/list', async(req,res) => {
   var post = req.body;
   const result = await userModel.find;
