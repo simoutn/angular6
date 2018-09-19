@@ -19,7 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { AddarticleComponent } from './addarticle/addarticle.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
-import { DashbordnavComponent } from './dashbordnav/dashbordnav.component';
+import { NavigationComponent } from './dashbord/navigation/navigation.component';
 
 
 @NgModule({
@@ -32,7 +32,7 @@ import { DashbordnavComponent } from './dashbordnav/dashbordnav.component';
     RegisterComponent,
     AddarticleComponent,
     DashbordComponent,
-    DashbordnavComponent
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,14 +6,29 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { AddarticleComponent } from './addarticle/addarticle.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
+import { NavigationComponent } from './dashbord/navigation/navigation.component';
+import { NavComponent } from './nav/nav.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'login', component: UserComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'dashbord/addarticle', component: AddarticleComponent },
-  { path: 'dashbord', component: DashbordComponent },
+  {
+    path: '', component: NavComponent, pathMatch: 'full', children:
+      [
+        {  path: '', pathMatch: 'full', redirectTo: 'home'},
+        { path: 'home', component: HomeComponent },
+        { path: 'login', component: UserComponent },
+        { path: 'about', component: AboutComponent },
+        { path: 'register', component: RegisterComponent }
+      ]
+  },
+
+
+  {
+    path: 'dashbord', component: NavigationComponent, children: [
+      // { path: '', component: NavigationComponent },
+      { path: 'addarticle', component: AddarticleComponent },
+
+    ]
+  },
 ];
 
 @NgModule({

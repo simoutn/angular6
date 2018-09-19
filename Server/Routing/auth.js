@@ -32,10 +32,10 @@ router.post('/login', async(req,res) => {
     res.send({user : result, message: 'you are sign in', userToken: token });
 
 });
-router.post('/list', async(req,res) => {
+router.post('/alluser', async(req,res) => {
   var post = req.body;
   const result = await userModel.find;
-  res.send({user : result , msg : "saved"});
+  res.send({user : result , msg : "liste des utilisateurs"});
 });
 
 module.exports = router;
