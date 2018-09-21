@@ -15,7 +15,6 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './main/nav/nav.component';
 import { UserComponent } from './main/user/user.component';
 import { AboutComponent } from './main/about/about.component';
-import { HomeComponent } from './main/home/home.component';
 import { RegisterComponent } from './main/register/register.component';
 import { AddarticleComponent } from './dashbord/addarticle/addarticle.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
@@ -29,7 +28,6 @@ import { MainComponent } from './main/main.component';
     UserComponent,
     NavComponent,
     AboutComponent,
-    HomeComponent,
     RegisterComponent,
     AddarticleComponent,
     DashbordComponent,

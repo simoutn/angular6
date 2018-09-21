@@ -1,4 +1,23 @@
 <!-- <ul>
     <li *ngIf="isLoggedIn"><a href="/admin/newarticle" routerLinkActive="active" >Ajouter un article</a></li>
   </ul>-->
-  
+  <div class="wrapper">
+    <div class="sidebar" data-color="dark">
+
+        <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+
+
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                Admin Dashboard
+            </div>
+
+            <ul class="nav">
+                <li class="active"><a routerLink="/dashbord">Dashbord</a></li>
+                <li  class="active"><a routerLink="/dashbord/addarticle">Ajouter Article</a></li>
+                <!-- <li  class="active"><a class="dropdown-item" href="javascript:void(0);" (click)="logout()">Logout</a></li>-->
+            </ul>
+        </div>
+    </div>
+  <router-outlet></router-outlet>
+
