@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserComponent } from './user/user.component';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
-import { AddarticleComponent } from './addarticle/addarticle.component';
+import { UserComponent } from './main/user/user.component';
+import { AboutComponent } from './main/about/about.component';
+import { HomeComponent } from './main/home/home.component';
+import { RegisterComponent } from './main/register/register.component';
+import { AddarticleComponent } from './dashbord/addarticle/addarticle.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { NavigationComponent } from './dashbord/navigation/navigation.component';
-import { NavComponent } from './nav/nav.component';
+import { NavComponent } from './main/nav/nav.component';
+import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   {
-    path: '', component: NavComponent, pathMatch: 'full', children:
+    path: '', component: MainComponent, pathMatch: 'full', children:
       [
-        {  path: '', pathMatch: 'full', redirectTo: 'home'},
+        // { path: '', pathMatch: 'full', redirectTo: 'home'},
         { path: 'home', component: HomeComponent },
         { path: 'login', component: UserComponent },
         { path: 'about', component: AboutComponent },
@@ -24,7 +25,6 @@ const routes: Routes = [
 
   {
     path: 'dashbord', component: NavigationComponent, children: [
-      // { path: '', component: NavigationComponent },
       { path: 'addarticle', component: AddarticleComponent },
 
     ]

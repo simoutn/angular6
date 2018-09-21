@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from './user';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { TestService } from '../services/test.service';
+import { TestService } from '../../services/test.service';
 import { CookieStorage, LocalStorage, SessionStorage } from 'ngx-store';
 
 @Component({
